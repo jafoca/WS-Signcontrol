@@ -2,7 +2,7 @@
   <div class="secondary-navigation">
     <ul class="wat-cf">
       <li class="first active"><%= link_to pat(:list), url(:channels, :index) %></li>
-      <li><%= link_to pat(:new), url(:channels, :new) %></li>
+      <!--<li><%= link_to pat(:new), url(:channels, :new) %></li> -->
     </ul>
   </div>
   <div class="content">
@@ -10,21 +10,15 @@
     <div class="inner">
       <table class="table">
         <tr>
-          <th class="first"><%= mat(:channel, :mode) %></th>
-          <th><%= mat(:channel, :twitter) %></th>
-          <th><%= mat(:channel, :html) %></th>
-          <th><%= mat(:channel, :rss) %></th>
-          <th><%= mat(:channel, :created_at) %></th>
+          <th class="first"><%= mat(:channel, :name) %></th>
+          <th><%= mat(:channel, :mode) %></th>
           <th><%= mat(:channel, :updated_at) %></th>
           <th class="last">&nbsp;</th>
         </tr>
         <% @channels.each do |channel| %>
         <tr>
-          <td class="first"><%= channel.mode %></td>
-          <td><%= channel.twitter %></td>
-          <td><%= channel.html %></td>
-          <td><%= channel.rss %></td>
-          <td><%= channel.created_at %></td>
+          <td class="first"><%= channel.name %></td>
+          <td><%= channel.mode %></td>
           <td><%= channel.updated_at %></td>
           <td class="last">
             <%= button_to pat(:edit), url(:channels, :edit, :id => channel.id), :method => :get, :class => :button_to %> |
