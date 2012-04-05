@@ -1,16 +1,23 @@
 <div class="group">
-  <%= f.label :mode %><%= f.error_message_on :mode %>
-  <%= f.text_field :mode, :class => :text_field %>
+  <%= f.label :name %><%= f.error_message_on :name %>
+  <%= f.text_field :name, :class => :text_field %>
+  <span class="description">Channel Name</span>
+</div>
+<div class="group">
+  <%= f.label :mode %><%= f.error_message_on :mode %><br/>
+	<%= f.radio_button :mode, :value => 'html'  %><%= f.label :mode_html, :caption => 'HTML Block'  %><br/>
+	<%= f.radio_button :mode, :value => 'twitter'  %><%= f.label :mode_twitter, :caption => "Twitter" %><br/>
+	<%= f.radio_button :mode, :value => 'rss'  %><%= f.label :mode_rss, :caption => "Piped RSS" %><br/>
+  <span class="description">Select the mode for your channel.</span>
+</div>
+<div class="group">
+  <%= f.label :html %><%= f.error_message_on :html %>
+  <%= f.text_field :html, :class => :text_field %>
   <span class="description">Ex: a simple text</span>
 </div>
 <div class="group">
   <%= f.label :twitter %><%= f.error_message_on :twitter %>
   <%= f.text_field :twitter, :class => :text_field %>
-  <span class="description">Ex: a simple text</span>
-</div>
-<div class="group">
-  <%= f.label :html %><%= f.error_message_on :html %>
-  <%= f.text_field :html, :class => :text_field %>
   <span class="description">Ex: a simple text</span>
 </div>
 <div class="group">

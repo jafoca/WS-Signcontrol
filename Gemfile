@@ -18,6 +18,8 @@ gem 'bson_ext', :require => "mongo"
 
 # Test requirements
 
+# Addons
+
 # Padrino Stable Gem
 gem 'padrino', '0.10.6'
 

@@ -1,5 +1,5 @@
 Admin.controllers :channels do
-
+  
   get :index do
     @channels = Channel.all
     render 'channels/index'
