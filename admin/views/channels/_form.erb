@@ -1,0 +1,25 @@
+<div class="group">
+  <%= f.label :mode %><%= f.error_message_on :mode %>
+  <%= f.text_field :mode, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+<div class="group">
+  <%= f.label :twitter %><%= f.error_message_on :twitter %>
+  <%= f.text_field :twitter, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+<div class="group">
+  <%= f.label :html %><%= f.error_message_on :html %>
+  <%= f.text_field :html, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+<div class="group">
+  <%= f.label :rss %><%= f.error_message_on :rss %>
+  <%= f.text_field :rss, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+
+<div class="group navform wat-cf">
+  <%= f.submit pat(:save), :class => :button %>
+  <%= f.submit pat(:cancel), :onclick => "window.location='#{url(:channels, :index)}';return false", :class => :button %>
+</div>
