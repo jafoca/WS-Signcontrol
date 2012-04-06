@@ -1,0 +1,65 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+
+
+  <%= stylesheet_link_tag :style %>
+  <%= javascript_include_tag :jquery, "jquery.livetwitter" %>
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+
+</head>
+<body>
+
+	<section id="welcome">
+		<ul>
+			<li>Welcome</li>
+			<li>ようこそ</li>
+			<li>Bienvenue</li>
+			<li>Willkommen</li>
+			<li>Bienvenido</li>
+			<li>Benvenuto</li>
+			<li>Добро пожаловать</li>
+			<li>Witamy</li>
+			<li>Bem-vindo</li>
+			<li>Välkommen</li>
+			<li>Tervetuloa</li>
+			<li>Velkommen</li>
+			<li>Welkom</li>
+			<li>欢迎</li>
+			<li>歡迎</li>
+			<li>환영</li>
+		</ul>
+	</section>
+	
+	<section class="channel" id="ws">
+		<h1>WorkSighted</h1>
+		<%= partial "channels/payload", :locals => { :channel => @ws } %>
+	</section>	
+	
+	<section class="channel" id="ci">
+		<h1>Collective Idea</h1>
+		<%= partial "channels/payload", :locals => { :channel => @ci } %>
+	</section>
+	
+	<section class="channel" id="bs">
+		<h1>Blue Sky Sessions</h1>
+		<%= partial "channels/payload", :locals => { :channel => @bs } %>
+	</section>
+
+
+</body>
+</html>
+
+<%= @ws.mode %>
+<%= @ws.html.html_safe %>
+<%= @ci.mode %>
+<%= @bs.mode %>

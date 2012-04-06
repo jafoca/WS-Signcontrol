@@ -19,6 +19,10 @@ WsSigncontrol.controllers :channels do
   # end
 
   get :index do
+    @ws = Channel.find_by_name('WorkSighted')
+    @ci = Channel.find_by_name('CollectiveIdea')
+    @bs = Channel.find_by_name('BlueSky')
+    render 'channels/index'
   end
 
 end

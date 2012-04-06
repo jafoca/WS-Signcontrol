@@ -1,0 +1,24 @@
+h1{
+	color: red;
+}
+
+body{
+	width: 1920px;
+	height: 1080px;
+	display: block;
+	overflow: hidden;
+}
+
+section#welcome{
+	width: 640px;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+section.channel{
+	width: 426px;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+}

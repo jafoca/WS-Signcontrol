@@ -1,0 +1,19 @@
+<%= channel.mode %>
+
+
+	
+<% if channel.mode == 'html' %>
+	<h2>HTML</html>
+	<%= channel.html.html_safe %>
+<% elsif channel.mode == 'twitter' %>
+	<h2>Twitter</h2>
+	<div id="tweets-<%= channel.name %>"></div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	 		$("#tweets-<%= channel.name %>").liveTwitter(<%= channel.twitter.html_safe %>);
+		});
+	</script>
+<% else %>
+	<h2>RSS</h2>
+	<strong>Rss is not implemented yet</strong>
+<% end %>
