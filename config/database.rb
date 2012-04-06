@@ -6,8 +6,8 @@ case Padrino.env
     MongoMapper.database = 'ws_signcontrol'
   
   when :production  then 
-    MongoMapper.connection = Mongo::Connection.new('staff.mongohq.com', 10018, :logger => logger)
-    MongoMapper.database = 'app3138678'
+    MongoMapper.connection = Mongo::Connection.new('flame.mongohq.com', 27021, :logger => logger)
+    MongoMapper.database = 'app3738600'
     MongoMapper.database.authenticate('heroku','bluesky120')
   
   when :test        then MongoMapper.database = 'signcontrol_test'
