@@ -12,54 +12,59 @@
 
 
   <%= stylesheet_link_tag :style %>
-  <%= javascript_include_tag :jquery, "jquery.livetwitter" %>
+  <%= javascript_include_tag :jquery, "jquery.livetwitter", "jquery.cycle", :application %>
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
 
 </head>
 <body>
-
-	<section id="welcome">
-		<ul>
-			<li>Welcome</li>
-			<li>ようこそ</li>
-			<li>Bienvenue</li>
-			<li>Willkommen</li>
-			<li>Bienvenido</li>
-			<li>Benvenuto</li>
-			<li>Добро пожаловать</li>
-			<li>Witamy</li>
-			<li>Bem-vindo</li>
-			<li>Välkommen</li>
-			<li>Tervetuloa</li>
-			<li>Velkommen</li>
-			<li>Welkom</li>
-			<li>欢迎</li>
-			<li>歡迎</li>
-			<li>환영</li>
-		</ul>
-	</section>
+	<div id="wrapper">
+		<section id="welcome">
+			<div class="clock">
+			   <div id="Date"></div>
+			      <ul>
+			          <li id="hours"></li>
+			          <li id="point">:</li>
+			          <li id="min"></li>
+			          <li id="point">:</li>
+			          <li id="sec"></li>
+			      </ul>
+			</div>
+			<ul id="welcome-list">
+				<li>Welcome</li>
+				<li>ようこそ</li>
+				<li>Bienvenue</li>
+				<li>Willkommen</li>
+				<li>Bienvenido</li>
+				<li>Benvenuto</li>
+				<li>Добро пожаловать</li>
+				<li>Witamy</li>
+				<li>Bem-vindo</li>
+				<li>Välkommen</li>
+				<li>Tervetuloa</li>
+				<li>Velkommen</li>
+				<li>Welkom</li>
+				<li>欢迎</li>
+				<li>歡迎</li>
+				<li>환영</li>
+			</ul>
+		</section>
 	
-	<section class="channel" id="ws">
-		<h1>WorkSighted</h1>
-		<%= partial "channels/payload", :locals => { :channel => @ws } %>
-	</section>	
+		<section class="channel" id="ws">
+			<h1>WorkSighted</h1>
+			<%= partial "channels/payload", :locals => { :channel => @ws } %>
+		</section>	
 	
-	<section class="channel" id="ci">
-		<h1>Collective Idea</h1>
-		<%= partial "channels/payload", :locals => { :channel => @ci } %>
-	</section>
+		<section class="channel" id="ci">
+			<h1>Collective Idea</h1>
+			<%= partial "channels/payload", :locals => { :channel => @ci } %>
+		</section>
 	
-	<section class="channel" id="bs">
-		<h1>Blue Sky Sessions</h1>
-		<%= partial "channels/payload", :locals => { :channel => @bs } %>
-	</section>
+		<section class="channel" id="bs">
+			<h1>Blue Sky Sessions</h1>
+			<%= partial "channels/payload", :locals => { :channel => @bs } %>
+		</section>
 
-
+	</div>
 </body>
 </html>
-
-<%= @ws.mode %>
-<%= @ws.html.html_safe %>
-<%= @ci.mode %>
-<%= @bs.mode %>
