@@ -7,7 +7,7 @@
   <%= f.label :mode %><%= f.error_message_on :mode %><br/>
 	<%= f.radio_button :mode, :value => 'html'  %><%= f.label :mode_html, :caption => 'HTML Block'  %><br/>
 	<%= f.radio_button :mode, :value => 'twitter'  %><%= f.label :mode_twitter, :caption => "Twitter" %><br/>
-	<%= f.radio_button :mode, :value => 'rss'  %><%= f.label :mode_rss, :caption => "Piped RSS" %><br/>
+	<%= f.radio_button :mode, :value => 'rss', :disabled => true  %><%= f.label :mode_rss, :caption => "Piped RSS" %><br/>
   <span class="description">Select the mode for your channel.</span>
 </div>
 <div class="group">
@@ -18,12 +18,12 @@
 <div class="group">
   <%= f.label :twitter %><%= f.error_message_on :twitter %>
   <%= f.text_field :twitter, :class => :text_field %>
-  <span class="description">Ex: a simple text</span>
+  <span class="description">Twitter search string for jquery livetwitter plugin. Example usage: <pre>'collectiveidea', {mode: 'user_timeline', rate: 120000}</pre> See: <a href="https://github.com/elektronaut/jquery.livetwitter" target="_blank">LiveTwitter plugin GitHub documentation</a> for more examples. Be sure to use proper rate limiting for user timelines.</span>
 </div>
 <div class="group">
   <%= f.label :rss %><%= f.error_message_on :rss %>
-  <%= f.text_field :rss, :class => :text_field %>
-  <span class="description">Ex: a simple text</span>
+  <%= f.text_field :rss, :class => :text_field, :disabled => true %>
+  <span class="description">Ex: not implemented yet, don't use</span>
 </div>
 
 <div class="group navform wat-cf">
