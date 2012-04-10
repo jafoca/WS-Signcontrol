@@ -5,10 +5,10 @@
 #   name = shell.ask("What's your name?")
 #   shell.say name
 #
-email     = shell.ask "Which email do you want use for logging into admin?"
-password  = shell.ask "Tell me the password to use:"
+#email     = shell.ask "Which email do you want use for logging into admin?"
+#password  = shell.ask "Tell me the password to use:"
 
-shell.say ""
+#shell.say ""
 
 #email     = "nick.defoe@blueskysessions.com"
 #password  = "bluesky120"
@@ -22,7 +22,7 @@ shell.say ""
 #                         :password_confirmation => password, 
 #                         :role => "admin")
 
-account = Account.create(:email => email, :name => "Foo", :surname => "Bar", :password => password, :password_confirmation => password, :role => "admin")
+#account = Account.create(:email => email, :name => "Foo", :surname => "Bar", :password => password, :password_confirmation => password, :role => "admin")
 
 if account.valid?
   shell.say "================================================================="
