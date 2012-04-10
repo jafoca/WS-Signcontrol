@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-$("#res").html("doc_width:" + $(document).width() + "<br/>doc_height:" + $(window).height() + "<br/>win_width:" + $(document).width() + "<br/>win_height:" + $(window).height() );
+$("#res").html("doc_width:" + $(document).width() + "<br/>doc_height:" + $(document).height() + "<br/>win_width:" + $(window).width() + "<br/>win_height:" + $(window).height() );
 	
 //welcome function	
 $('#welcome-list').cycle({ 
