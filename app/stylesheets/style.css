@@ -89,34 +89,39 @@ p {
 /* imagery */
     
 #wrapper, #background, #smudge, #logos {
+    width: 100%;
     height: 1080px;
     overflow: hidden;
-}
+    position: absolute;
+    }
 
 #wrapper {
-    width: 1920px;
+    width: 100%;
     position: relative;
     }
 
 #background {
-    width: 100%;
-    background: url(/images/background4.jpg) no-repeat top left;
-    position: absolute;
     z-index: 1;
     }
 
 #smudge {
-    width: 100%;
-    background: url(/images/smudge.png) no-repeat top left;
-    opacity: .4;
     z-index: 2;
-    position: absolute;
+    }
+    
+#logos {
+    z-index: 4;
+    }
+    
+#background img, #logos img, #smudge img {
+    width: 100%;
     }
 
-#logos {
-    width: 100%;
-    background: url(/images/logos.png) no-repeat bottom left;
-    z-index: 4;
+#smudge img {
+    opacity: .4;
+    }
+
+#logos img {
+    bottom: 0;
     position: absolute;
     }
 
