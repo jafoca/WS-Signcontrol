@@ -90,13 +90,12 @@ p {
     
 #wrapper, #background, #smudge, #logos {
     width: 100%;
-    height: 1080px;
+    height: 800px;
     overflow: hidden;
     position: absolute;
     }
 
 #wrapper {
-    width: 1920px;
     position: relative;
     }
 
