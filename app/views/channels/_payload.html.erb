@@ -1,12 +1,10 @@
 <% if channel.mode == 'html' %>
-	<h2>HTML</html>
 	<%= channel.html.html_safe %>
 <% elsif channel.mode == 'twitter' %>
-	<h2>Twitter</h2>
-	<div id="tweets-<%= channel.name %>"></div>
+	<article id="idea"></article>
 	<script type="text/javascript">
 		$(document).ready(function() {
-	 		$("#tweets-<%= channel.name %>").liveTwitter(<%= channel.twitter.html_safe %>);
+	 		$("#idea").liveTwitter(<%= channel.twitter.html_safe %>);
 		});
 	</script>
 <% else %>

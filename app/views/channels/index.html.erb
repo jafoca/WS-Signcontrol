@@ -19,52 +19,68 @@
 </head>
 <body>
 	<div id="wrapper">
-		<section id="welcome">
-			<div class="clock">
-			   <div id="Date"></div>
-			      <ul>
-			          <li id="hours"></li>
-			          <li id="point">:</li>
-			          <li id="min"></li>
-			          <li id="point">:</li>
-			          <li id="sec"></li>
-			      </ul>
-			</div>
-			<ul id="welcome-list">
-				<li>Welcome</li>
-				<li>ようこそ</li>
-				<li>Bienvenue</li>
-				<li>Willkommen</li>
-				<li>Bienvenido</li>
-				<li>Benvenuto</li>
-				<li>Добро пожаловать</li>
-				<li>Witamy</li>
-				<li>Bem-vindo</li>
-				<li>Välkommen</li>
-				<li>Tervetuloa</li>
-				<li>Velkommen</li>
-				<li>Welkom</li>
-				<li>欢迎</li>
-				<li>歡迎</li>
-				<li>환영</li>
-			</ul>
-		</section>
 	
-		<section class="channel" id="ws">
-			<h1>WorkSighted</h1>
-			<%= partial "channels/payload", :locals => { :channel => @ws } %>
-		</section>	
-	
-		<section class="channel" id="ci">
-			<h1>Collective Idea</h1>
-			<%= partial "channels/payload", :locals => { :channel => @ci } %>
-		</section>
-	
-		<section class="channel" id="bs">
-			<h1>Blue Sky Sessions</h1>
-			<%= partial "channels/payload", :locals => { :channel => @bs } %>
-		</section>
+    <div id="background"></div>
+    
+    <div id="smudge"></div>
 
-	</div>
+    <div id="logos"></div>
+
+        <article id="main">
+    		<section id="intro">
+    		
+    			<div class="clock">
+    			   <div id="Date"></div>
+    			      <ul>
+    			          <li id="hours"></li>
+    			          <li id="point">:</li>
+    			          <li id="min"></li>
+    			          <li id="point">:</li>
+    			          <li id="sec"></li>
+    			      </ul>
+    			</div>
+    			
+    			
+    			<ul id="welcome-list">
+    				<li>Welcome</li>
+    				<li>ようこそ</li>
+    				<li>Bienvenue</li>
+    				<li>Willkommen</li>
+    				<li>Bienvenido</li>
+    				<li>Benvenuto</li>
+    				<li>Добро пожаловать</li>
+    				<li>Witamy</li>
+    				<li>Bem-vindo</li>
+    				<li>Välkommen</li>
+    				<li>Tervetuloa</li>
+    				<li>Velkommen</li>
+    				<li>Welkom</li>
+    				<li>欢迎</li>
+    				<li>歡迎</li>
+    				<li>환영</li>
+    			</ul>
+    			
+    		</section><!-- #intro -->
+        </article><!-- #main -->
+        
+        <article id="work">
+    		<section class="blog">
+    			<%= partial "channels/payload", :locals => { :channel => @ws } %>
+    		</section><!-- #blog -->
+        </article><!-- #work -->
+    	
+    	<article id="blue">
+            <section class="message">
+    			<%= partial "channels/payload", :locals => { :channel => @bs } %>
+    		</section> <!-- #message -->
+    	</article><!-- #blue -->
+    
+        <article id="idea">
+    		<section id="tweet">
+    			<%= partial "channels/payload", :locals => { :channel => @ci } %>
+    		</section><!-- #idea -->
+    	</article><!-- #tweet -->
+
+    </div>
 </body>
 </html>
