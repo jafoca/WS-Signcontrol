@@ -52,11 +52,6 @@ table {
 
 
 
-
-
-
-
-
 /* Styling for the digital sign */
 
 /* global */
@@ -136,6 +131,10 @@ p {
     position: relative;
     z-index: 3;
     }
+    
+#main {
+    margin: 3.125% 2% 3.125% 1.125%;
+    }
 
 #main h1, #main h2, #main p {
     color: #fff;
@@ -207,11 +206,17 @@ p {
         }
 
 
+/* Date */
 
-
-
+#Date {
+    color: #2C2C2C;
+    font-size: 1.75em;
+    line-height: 1.428571428571429em;
+    font-weight: bold;
+    }
 
 /* Welcome List styling */
+
 ul#welcome-list {
 	height: 1em;
 	overflow: hidden;
